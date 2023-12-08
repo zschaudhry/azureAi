@@ -12,5 +12,5 @@ This project uses various Azure AI services to build intelligent solutions. It i
 To get this project up and running, follow these steps:
 
 ```bash
-git clone <your-repo>
-cd <your-repo>
+git clone azureAi
+cd azureAi
