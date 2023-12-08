@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Chat with Me</a>
+    </nav>
+<div class="container">
+    <form id="upload-form" enctype="multipart/form-data" class="my-3">
+        <div class="form-group">
+            <label>Select PDF to upload:</label>
+            <input type="file" name="file" id="file" accept=".pdf" class="form-control">
+        </div>
+        <button type="submit" class="btn btn-primary">Upload PDF</button>
+    </form>
+
+    <textarea name="txtPDF" id="txtPDF" placeholder="this is where PDF content will come" rows="8" class="form-control my-3"></textarea>
+
+    <form id="prompt-form" class="my-3">
+        <div class="form-group">
+            <label>Please enter your prompt here:</label>
+            <textarea name="txtPrompt2" id="txtPrompt2" placeholder="Please summarize following text?" rows="8" class="form-control"></textarea>
+        </div>
+        <button type="submit" id="submitBtn" class="btn btn-primary">Submit</button>
+    </form>
+    <p id="txtRespChoice" class="my-3"></p>
+</div>
+
+<!-- Bootstrap JS, jQuery and upload script-->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="uploadScript.js"></script>
+
+</body>
+</html>
