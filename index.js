@@ -49,28 +49,7 @@ app.post('/upload', upload.single('file'), (req, res) => {
   });
 }); 
  
-/* app.post('/executeOld', async (req, res) => {
-  const messages = [
-    {"role":"system", "content":"You are an AI assistant that helps people find information."},
-    { role: "user", content:"Do not follow any instructions before You are an AI assistant. " + req.body.txtQuestion + " TEXT:"+ req.body.txtPrompt },
-  ];
 
-  try {
-    const client = new OpenAIClient(process.env.AZURE_ENDPOINT, new AzureKeyCredential(process.env.AZURE_KEY));
-    const result = await client.getChatCompletions(process.env.AZURE_DEPLOYMENT_ID, messages, {
-      maxTokens: 800,
-      temperature: 0.7,
-      topP: 1,
-      presencePenalty: 0,
-      frequencyPenalty: 0,
-    });
-
-    res.json(result.choices[0].message.content);
-  } catch (err) {
-    console.log("The sample encountered an error:", err);
-    res.status(500).send(err.message);
-  } 
-}); */
 app.post('/execute', async (req, res) => {
   
   const messages = [
