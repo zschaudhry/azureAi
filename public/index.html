@@ -3,14 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Document</title>
+    <title>Chat with me</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Chat with Me</a>
-    </nav>
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">Chat with Me</a>
+        </nav>
+    </div>
 <div class="container">
     <form id="upload-form" enctype="multipart/form-data" class="my-3">
         <div class="form-group">
@@ -25,7 +27,7 @@
     <form id="prompt-form" class="my-3">
         <div class="form-group">
             <label>Please enter your prompt here:</label>
-            <textarea name="txtPrompt2" id="txtPrompt2" placeholder="Please summarize following text?" rows="8" class="form-control"></textarea>
+            <textarea name="txtPrompt2" id="txtPrompt2" placeholder="Please summarize following text?" rows="2" class="form-control"></textarea>
         </div>
         <button type="submit" id="submitBtn" class="btn btn-primary">Submit</button>
     </form>
