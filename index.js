@@ -44,13 +44,14 @@ let filteredText="";
 
 // Route to handle file upload
 app.post('/upload', upload.single('file'), (req, res) => {
-  const dataBuffer = fs.readFileSync(req.file.path);
+  let path = req.file.path;
+  const dataBuffer = fs.readFileSync(path);
   pdfParse(dataBuffer).then(data => {
     filteredText = filterText(data.text.toLowerCase());
     res.send(filteredText);
 
     // Delete the file after reading
-    fs.unlinkSync(req.file.path, err => {
+    fs.unlinkSync(path, err => {
       if (err) console.error("Error deleting the file:", err);
       else console.log("File read successfully and then deleted successfully");
     });
